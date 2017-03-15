@@ -44,7 +44,7 @@ def add_entry():
 		abort(401)
 	g.db.execute('insert into entries (title, text) values (?, ?)', [request.form['title'], request.form['text']])
 	g.db.commit()
-	flash('Nex entry was successsfully posted')
+	#flash('Nex entry was successsfully posted')
 	return redirect(url_for('index'))
 	
 @app.route('/login', methods=['POST', 'GET'])
